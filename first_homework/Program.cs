@@ -8,13 +8,15 @@
 // if(number1 > number2){
 //     Console.WriteLine($"{number1} is MAX");
 //     }
-// else
-// {
+// if(number1 == number2){
+//     Console.WriteLine($"{number1} is equal {number2}");
+// }
+// if(number2 > number1){
 //     Console.WriteLine($"{number2} is MAX");
 // }
 
 
-// Task 2
+//Task 2
 
 // Console.Write("Enter the first number ");
 // int number1 = Convert.ToInt32(Console.ReadLine());
@@ -24,7 +26,7 @@
 // int number3 = Convert.ToInt32(Console.ReadLine());
 // int Max = number1;
 
-// if(number1 > Max) Max = number1;
+
 // if(number2 > Max) Max = number2;
 // if(number3 > Max) Max = number3;
 
@@ -45,7 +47,7 @@
 // }
 
 
-// Task 4
+// Task 4 first solution
 
 // Console.Write("Enter a number ");
 // int n = Convert.ToInt32(Console.ReadLine());
@@ -55,4 +57,16 @@
 //     Console.Write(i);
 //     Console.Write(", ");
 //     }
+// }
+
+
+// Task 4 second solution
+
+// Console.Write("Enter a number ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// for(int i = 2; i <= n;  i+=2){
+    
+//     Console.Write(i);
+//     Console.Write(", ");
 // }
