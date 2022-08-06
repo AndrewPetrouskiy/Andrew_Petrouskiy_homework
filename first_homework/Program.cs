@@ -33,13 +33,26 @@
 
 // Task 3
 
-Console.Write("Enter a number ");
-int number = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter a number ");
+// int number = Convert.ToInt32(Console.ReadLine());
 
-if(number % 2 == 0){
-    Console.WriteLine($"{number} is EVEN");
-    }
-else
-{
-    Console.WriteLine($"{number} is ODD");
-}
+// if(number % 2 == 0){
+//     Console.WriteLine($"{number} is EVEN");
+//     }
+// else
+// {
+//     Console.WriteLine($"{number} is ODD");
+// }
+
+
+// Task 4
+
+// Console.Write("Enter a number ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// for(int i = 1; i <= n;  i++){
+//     if(i % 2 == 0){
+//     Console.Write(i);
+//     Console.Write(", ");
+//     }
+// }
