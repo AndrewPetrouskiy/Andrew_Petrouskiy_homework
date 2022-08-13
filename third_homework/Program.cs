@@ -1,88 +1,88 @@
-﻿// Task 22
+﻿
+// Задача 19 Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
-// int Squreofnumber();
-
-// Console.Write("Enter the number ");
-// int N = Convert.ToInt32(Console.ReadLine());
-
-
-// Console.Write("Enter the number ");
-// var figure_two = Squreofnumber(input);
-//  Console.WriteLine($"{figure_two} is second figure from {input}");
-
-
-
-// Task 18
-
-
-
-string Showrange(int number)
+int FindPalindrom(int number)
 {
-
-    if(number == 1)
+    int reversed_number = 0;
+    int tmp_original = number;
+    while(tmp_original > 0)
     {
-        return "x > 0 & y > 0";
+        reversed_number = (reversed_number *10) + tmp_original % 10;
+        tmp_original = tmp_original / 10;
     }
-
-    if(number == 2)
-    {
-        return "x < 0 & y > 0";
-    }
-
-    if(number == 3)
-    {
-        return "x < 0 & y < 0";
-    }
-
-    if(number == 4)
-    {
-        return "x > 0 & y < 0";
-    }
-
-    return "-1";
-    
+    return reversed_number;
 }
 
-
 // Console.Write("Enter the number ");
-// int N = Convert.ToInt32(Console.ReadLine());
-// string input = Showrange(N);
-
-// if(input == "-1")
+// int Original = Convert.ToInt32(Console.ReadLine());
+// int Reverse = FindPalindrom(Original);
+// if(Reverse == Original)
 // {
-//     Console.WriteLine($"{N} не уовлетворяет условию задачи" );
+//     Console.Write($"{Original} and {Reverse} are Palindrom");
 // }
 // else
 // {
-// Console.Write($"{N} находится в координатах {input}");
+//     Console.Write($"{Original} and {Reverse} aren't Palindrom");
 // }
 
 
 
+// Задача 21. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве
 
+double Finddistance(int x1, int x2, int y1, int y2, int z1, int z2)
 
-
-double Finddistance(int x1, int y1, int x2, int y2)
 {
-    double AB = ((x2 - x1)^2 + (y2 - y1)^2)*0,5 ;
+    double AB = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2) + Math.Pow(z2 - z1, 2));
+    
     return AB;
 }
 
+// Console.WriteLine("Enter the x1");
+// int x1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter the x2");
+// int x2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter the y1");
+// int y1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter the y2");
+// int y2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter the z1");
+// int z1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter the z2");
+// int z2 = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Enter the x1 ");
-int x1 = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Enter the y1 ");
-int y1 = Convert.ToInt32(Console.ReadLine());
+// double input = Finddistance(x1, x2, y1, y2, z1, z2);
+// string Result = string.Format("{0:f}" , input); 
+// Console.WriteLine(Result);
 
-Console.Write("Enter the x2 ");
-int x2 = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Enter the y2 ");
-int y2 = Convert.ToInt32(Console.ReadLine());
 
-double input = Finddistance(3 , 6 , 2 , 1);
-Console.WriteLine(input);
+// Задача 23. Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125
+
+
+
+int[] CubicOfNumber(int n)
+{
+    int[] array = new int[n];
+
+    for (int i = 1; i <= n; i++)
+    {
+        array[i - 1] = i * i * i;
+    }
+    return array;
+}
+
+// Console.WriteLine("Enter the number");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// int[] result = CubicOfNumber(number);
+
+// for (int i = 0; i < result.Length; i++)
+// {
+//     Console.WriteLine(result[i]);
+// }
 
 
 
