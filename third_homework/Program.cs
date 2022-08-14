@@ -1,29 +1,89 @@
 ﻿
-// Задача 19 Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+// Задача 19 solution 1 Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
-int FindPalindrom(int number)
-{
-    int reversed_number = 0;
-    int tmp_original = number;
-    while(tmp_original > 0)
-    {
-        reversed_number = (reversed_number *10) + tmp_original % 10;
-        tmp_original = tmp_original / 10;
-    }
-    return reversed_number;
-}
-
-// Console.Write("Enter the number ");
-// int Original = Convert.ToInt32(Console.ReadLine());
-// int Reverse = FindPalindrom(Original);
-// if(Reverse == Original)
+// bool FindPalindrom(int number)
 // {
-//     Console.Write($"{Original} and {Reverse} are Palindrom");
+//     int reversed_number = 0;
+//     int tmp_original = number;
+//     while(tmp_original > 0)
+//     {
+//         reversed_number = (reversed_number *10) + tmp_original % 10;
+//         tmp_original = tmp_original / 10;
+//     }
+//     if(number == reversed_number)
+// {
+//     return true;
 // }
 // else
 // {
-//     Console.Write($"{Original} and {Reverse} aren't Palindrom");
+//     return false;
 // }
+// }
+
+// Console.Write("Enter the number ");
+// int Original = Convert.ToInt32(Console.ReadLine());
+// bool Reverse = FindPalindrom(Original);
+// if(Reverse == true)
+// {
+//     Console.Write("Palindrom");
+// }
+// else
+// {
+//     Console.Write("Not Palindrom");
+// }
+
+
+// Задача 19 solution 2
+
+// int FindPalindrom(int number)
+// {
+//     int reversed_number = 0;
+//     int tmp_original = number;
+//     while(tmp_original > 0)
+//     {
+//         reversed_number = (reversed_number *10) + tmp_original % 10;
+//         tmp_original = tmp_original / 10;
+//     }
+//     return reversed_number;
+// }
+
+// bool FindReverse(int number , int numbertwo)
+// {
+//     if(number == numbertwo)
+//     {
+//         return true;
+//     }
+//     else
+//     {
+//         return false;
+//     }
+// }
+
+
+// Console.Write("Enter the number ");
+// int Original = Convert.ToInt32(Console.ReadLine());
+// var Reverse = FindReverse(Original, FindPalindrom(Original));
+
+// if(Reverse == true)
+// {
+//     Console.Write("Palindrom");
+// }
+// else
+// {
+//     Console.Write("Not Palindrom");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
