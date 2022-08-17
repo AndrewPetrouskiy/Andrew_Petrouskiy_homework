@@ -14,6 +14,27 @@ return arg;
 // double result = GetExponentiation(numberOne, numberTwo);
 // System.Console.WriteLine($"{numberOne} exponentiation {numberTwo} equals {result}");
 
+// Task 25 solution 2
+
+
+double GetExponentiationTwo(double arg1 , double arg2)
+{
+double exp = 1;
+for(double i = 0; i < arg2; i++)
+{
+    exp = exp * arg1;
+}
+return exp;
+}
+
+// Console.WriteLine("enter the number 1");
+// double numberOne = double.Parse(Console.ReadLine());
+// Console.WriteLine("enter the number 2");
+// double numberTwo = double.Parse(Console.ReadLine());
+
+// double result = GetExponentiationTwo(numberOne, numberTwo);
+// System.Console.WriteLine($"{numberOne} exponentiation {numberTwo} equals {result}");
+
 
 
 
@@ -55,35 +76,62 @@ int GetSumOfFigures(int num)
 
 
 
-Console.WriteLine("enter the number 1");
-int n1 = int.Parse(Console.ReadLine());
+// Console.WriteLine("enter the number 1");
+// int n1 = int.Parse(Console.ReadLine());
 
-Console.WriteLine("enter the number 2");
-int n2 = int.Parse(Console.ReadLine());
+// Console.WriteLine("enter the number 2");
+// int n2 = int.Parse(Console.ReadLine());
 
-Console.WriteLine("enter the number 3");
-int n3 = int.Parse(Console.ReadLine());
+// Console.WriteLine("enter the number 3");
+// int n3 = int.Parse(Console.ReadLine());
 
-Console.WriteLine("enter the number 4");
-int n4 = int.Parse(Console.ReadLine());
+// Console.WriteLine("enter the number 4");
+// int n4 = int.Parse(Console.ReadLine());
 
-Console.WriteLine("enter the number 5");
-int n5 = int.Parse(Console.ReadLine());
+// Console.WriteLine("enter the number 5");
+// int n5 = int.Parse(Console.ReadLine());
 
-Console.WriteLine("enter the number 6");
-int n6 = int.Parse(Console.ReadLine());
+// Console.WriteLine("enter the number 6");
+// int n6 = int.Parse(Console.ReadLine());
 
-Console.WriteLine("enter the number 7");
-int n7 = int.Parse(Console.ReadLine());
+// Console.WriteLine("enter the number 7");
+// int n7 = int.Parse(Console.ReadLine());
 
-Console.WriteLine("enter the number 8");
-int n8 = int.Parse(Console.ReadLine());
-
-
-int[] array = { n1, n2, n3, n4, n5, n6, n7, n8 };
+// Console.WriteLine("enter the number 8");
+// int n8 = int.Parse(Console.ReadLine());
 
 
-void PrintArray(int[] arr)
+// int[] array = { n1, n2, n3, n4, n5, n6, n7, n8 };
+
+
+// void PrintArray(int[] arr)
+// {
+    
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         System.Console.Write($"{arr[i]} ");
+//     }
+    
+// }
+
+// PrintArray(array);
+
+
+
+// Task 29. solution 2
+
+
+Console.WriteLine("enter the massive from 8 numbers");
+string data = Console.ReadLine();
+
+string[] SplitNumber(string dat)
+{
+string[] splitData = dat.Split(',');
+return splitData;
+}
+
+
+void PrintArray(string[] arr)
 {
     
     for (int i = 0; i < arr.Length; i++)
@@ -92,5 +140,5 @@ void PrintArray(int[] arr)
     }
     
 }
-
-PrintArray(array);
+// string[] newList = SplitNumber(data);
+// PrintArray(newList);
