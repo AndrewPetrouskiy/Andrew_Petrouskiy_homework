@@ -224,7 +224,7 @@
 //         {
 //             return true;
 //         }
-        
+
 //     }
 //     return false;
 // }
@@ -288,40 +288,62 @@
 
 // Task 37.
 
-// int[] array = new int[11];
+int[] array = new int[10];
 
-// int[] FillArray(int[] arr)
-// {
-// Random random =  new Random();
-//     for(int i = 0; i < arr.Length; i++)
-//     {
-//         arr[i] = random.Next(1, 10);
+int[] FillArray(int[] arr)
+{
+    Random random = new Random();
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = random.Next(1, 10);
 
-//     }
-//     return arr;
-// }
+    }
+    return arr;
+}
 
 
-// void PrintArray(int[] arr)
-// {
-// for(int i = 0; i < arr.Length; i++)
-// {
-//     System.Console.Write($"{arr[i]} ");
-// }
-// }
+void PrintArray(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        System.Console.Write($"{arr[i]} ");
+    }
+}
 
-// int[] FindMultiplyNumbers(int[] arr)
-// {
-// int[] multiplyNumbers = new int[arr.Length / 2];
-// for(int i = 0; i < arr.Length / 2; i++)
-// {
-//     multiplyNumbers[i] = arr[i] * arr[arr.Length - 1 -i];
-// }
-// return multiplyNumbers;
-// }
+int[] FindMultiplyNumbers(int[] arr)
+{
+    if (arr.Length % 2 == 1)
+    {
+        int[] multiplyNumbers = new int[arr.Length / 2 + 1];
+        for (int i = 0; i < arr.Length / 2 + 1; i++)
+        {
+            if (arr[i] == arr[arr.Length - 1 - i])
+            {
+                multiplyNumbers[i] = arr[i];
+            }
+            else
+            {
+                multiplyNumbers[i] = arr[i] * arr[arr.Length - 1 - i];
+            }
 
-// int[] n = FillArray(array);
-// PrintArray(n);
-// System.Console.WriteLine();
-// int[] result = FindMultiplyNumbers(n);
-// PrintArray(result);
+        }
+        return multiplyNumbers;
+    }
+
+    else
+    {
+        int[] multiplyNumbers2 = new int[arr.Length / 2];
+        for (int i = 0; i < arr.Length / 2; i++)
+        {
+            multiplyNumbers2[i] = arr[i] * arr[arr.Length - 1 - i];
+        }
+        return multiplyNumbers2;
+    }
+
+}
+
+int[] n = FillArray(array);
+PrintArray(n);
+System.Console.WriteLine();
+int[] result = FindMultiplyNumbers(n);
+PrintArray(result);
