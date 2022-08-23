@@ -1,10 +1,10 @@
-﻿void PrintArray(int[] arr)
-{
-for(int i = 0; i < arr.Length; i++)
-{
-    System.Console.Write($"{arr[i]} ");
-}
-}
+﻿// void PrintArray(int[] arr)
+// {
+// for(int i = 0; i < arr.Length; i++)
+// {
+//     System.Console.Write($"{arr[i]} ");
+// }
+// }
 
 
 //-----------------------------------------------------------------------------------------------------------------------
@@ -65,7 +65,7 @@ int FindSumOddPositionsNumbers(int[] arr)
     int sum = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (i % 2 == 0)
+        if (i % 2 != 0)
         {
             sum += arr[i];
         }
@@ -84,46 +84,46 @@ int FindSumOddPositionsNumbers(int[] arr)
 //SOLUTION 1. тут я искал через вложенный цикл
 
 
-int[] array = new int[10];
+// int[] array = new int[10];
 
-int[] FillArray(int[] arr)
-{
-    Random random = new Random();
-    for (int i = 0; i < arr.Length; i++)
-    {
-        arr[i] = random.Next(-1000, 1000);
-    }
-    return arr;
-}
+// int[] FillArray(int[] arr)
+// {
+//     Random random = new Random();
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = random.Next(-1000, 1000);
+//     }
+//     return arr;
+// }
 
 
-int FindDIfferenceBetweeMaxAndMin(int[] arr)
-{
-    int min = int.MaxValue;
-    int max = int.MinValue;
-    foreach (var item in arr)
-    {
-        if (item > max)
-        {
-            max = item;
-        }
-        foreach (var item2 in arr)
-        {
-            if (item2 < min)
-            {
-                min = item2;
-            }
-        }
-    }
+// int FindDIfferenceBetweeMaxAndMin(int[] arr)
+// {
+//     int min = int.MaxValue;
+//     int max = int.MinValue;
+//     foreach (var item in arr)
+//     {
+//         if (item > max)
+//         {
+//             max = item;
+//         }
+//         foreach (var item2 in arr)
+//         {
+//             if (item2 < min)
+//             {
+//                 min = item2;
+//             }
+//         }
+//     }
 
-    int difference = max - min;
-    return difference;
-}
+//     int difference = max - min;
+//     return difference;
+// }
 
-int[] fill = FillArray(array);
-int difference = FindDIfferenceBetweeMaxAndMin(fill);
-System.Console.Write($"{difference} it's a difference between max and min meaning of massive ");
-PrintArray(fill);
+// int[] fill = FillArray(array);
+// int difference = FindDIfferenceBetweeMaxAndMin(fill);
+// System.Console.Write($"{difference} it's a difference between max and min meaning of massive ");
+// PrintArray(fill);
 
 
 
@@ -194,55 +194,55 @@ PrintArray(fill);
 //-----------------------------------------------------------------------------------------------------------------------
 // Solution 3 . Тут я попробывал через дробные числа.
 
-// double[] array = new double[4];
+double[] array = new double[4];
 
-// double[] FillArray(double[] arr)
-// {
-//     Random random = new Random();
-//     for (int i = 0; i < arr.Length; i++)
-//     {
-//         arr[i] = random.NextDouble() * 100;
-//     }
-//     return arr;
-// }
-
-
-// void PrintArray(double[] arr)
-// {
-//     for (int i = 0; i < arr.Length; i++)
-//     {
-//         System.Console.Write($"{arr[i]} ");
-//     }
-// }
+double[] FillArray(double[] arr)
+{
+    Random random = new Random();
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = Math.Round(random.Next(-10 , 11) * random.NextDouble(), 2);
+    }
+    return arr;
+}
 
 
+void PrintArray(double[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        System.Console.Write($"{arr[i]} ");
+    }
+}
 
-// double FindDIfferenceBetweeMaxAndMin(double[] arr)
-// {
-//     double min = double.MaxValue;
-//     double max = double.MinValue;
-//     foreach (var item in arr)
-//     {
-//         if (item > max)
-//         {
-//             max = item;
-//         }
-//         foreach (var item2 in arr)
-//         {
-//             if (item2 < min)
-//             {
-//                 min = item2;
-//             }
-//         }
-//     }
 
-//     double difference = max - min;
-//     return difference;
-// }
 
-// double[] fill = FillArray(array);
-// double difference = Math.Round(FindDIfferenceBetweeMaxAndMin(fill), 2, MidpointRounding.AwayFromZero);
-// System.Console.Write($"{difference} it's a difference between max and min meaning of massive ");
-// PrintArray(fill);
+double FindDIfferenceBetweeMaxAndMin(double[] arr)
+{
+    double min = double.MaxValue;
+    double max = double.MinValue;
+    foreach (var item in arr)
+    {
+        if (item > max)
+        {
+            max = item;
+        }
+        foreach (var item2 in arr)
+        {
+            if (item2 < min)
+            {
+                min = item2;
+            }
+        }
+    }
+
+    double difference = max - min;
+    return difference;
+}
+
+double[] fill = FillArray(array);
+double difference = Math.Round(FindDIfferenceBetweeMaxAndMin(fill), 2, MidpointRounding.AwayFromZero);
+System.Console.Write($"{difference} it's a difference between max and min meaning of massive ");
+PrintArray(fill);
 
 
