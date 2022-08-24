@@ -2,11 +2,12 @@
 
 // //создает массив элементов от мин до макс ----------------------------------------
 
-// int[] GetRandomArray(int length, int minValue, int maxValue){
+// int[] GetRandomArray(int length, int minValue, int maxValue)
+// {
 //     int[] array = new int[length];
 
 //     Random random = new Random();
-//     for(int i = 0; i < length; i++)
+//     for (int i = 0; i < length; i++)
 //     {
 //         array[i] = random.Next(minValue, maxValue + 1);
 //     }
@@ -19,7 +20,7 @@
 // {
 //     int[] result = new int[array.Length];
 
-//     for(int i = 0; i< array.Length; i++)
+//     for (int i = 0; i < array.Length; i++)
 //     {
 //         result[i] = array[array.Length - 1 - i];
 //     }
@@ -31,9 +32,9 @@
 
 // void PrintArray(int[] array)
 // {
-//      for(int i = 0; i< array.Length; i++)
+//     for (int i = 0; i < array.Length; i++)
 //     {
-//          Console.Write($"{array[i]} ");
+//         Console.Write($"{array[i]} ");
 //     }
 // }
 
@@ -48,7 +49,7 @@
 // PrintArray(result);
 
 
-//Task 40==============================================================================================
+// Task 40 ==============================================================================================
 
 
 
@@ -69,46 +70,46 @@
 //     return false;
 // }
 
-// bool result = CheckTheTriangleSides(a , b, c);
+// bool result = CheckTheTriangleSides(a, b, c);
 // if (result == true)
 // {
 //     System.Console.WriteLine($"The triange with sides a =  {a}, b =  {b}, c =  {c}  exists");
-// } 
+// }
 // else
 // {
-// System.Console.WriteLine($"The triange with sides a =  {a}, b =  {b}, c =  {c} doesn't exists");
+//     System.Console.WriteLine($"The triange with sides a =  {a}, b =  {b}, c =  {c} doesn't exists");
 // }
 
 // Task 42 =======================================================
 
-//solution 1-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// solution 1 -=-=-=-= --=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -
 
-// string TranslateTheNumber( int n)
+// string TranslateTheNumber(int n)
 // {
-//    string num = String.Empty;
-//    while(n>0)
-//    {
-//       num = num + n % 2;
-//       n = n /2;
-//    }
-//    return num;
+//     string num = String.Empty;
+//     while (n > 0)
+//     {
+//         num = num + n % 2;
+//         n = n / 2;
+//     }
+//     return num;
 // }
 
 // char[] ReverseArray(string num)
 // {
-//    char[] result = new char[num.Length];
-//    for (int i = 0; i < num.Length; i++)
-//    {
-//       result[i] = num[num.Length - 1 - i];
-//    }
-//    return result;
+//     char[] result = new char[num.Length];
+//     for (int i = 0; i < num.Length; i++)
+//     {
+//         result[i] = num[num.Length - 1 - i];
+//     }
+//     return result;
 // }
 
 // void PrintArray(char[] array)
 // {
-//      for(int i = 0; i< array.Length; i++)
+//     for (int i = 0; i < array.Length; i++)
 //     {
-//          Console.Write($"{array[i]}");
+//         Console.Write($"{array[i]}");
 //     }
 // }
 
@@ -121,7 +122,7 @@
 // PrintArray(reverseResult);
 
 
-//solution 2 -=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// solution 2 -=-=-=-= --=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -
 
 // Console.Write("Enter the Number ");
 // int number = Convert.ToInt32(Console.ReadLine());
@@ -132,41 +133,41 @@
 
 // string Binary(int num)
 // {
-//    string str = String.Empty;
-//    while (num > 0)
-//    {
-//       str = $"{Convert.ToString(num%2)}{str}";
-//       num = num / 2;
-//    }
-//    return str;
+//     string str = String.Empty;
+//     while (num > 0)
+//     {
+//         str = $"{Convert.ToString(num % 2)}{str}";
+//         num = num / 2;
+//     }
+//     return str;
 // }
 
 // System.Console.WriteLine(Binary(number));
 
 // Task 44 =====================================================================
 
-// int[,] array2d = new int [10 , 10];
+// int[,] array2d = new int[10, 10];
 
 // Random random = new Random();
 
 // for (int i = 0; i < array2d.GetLength(0); i++)
 // {
-//    for (int j = 0; j < array2d.GetLength(1); j++)
-//    {
-//       array2d[i,j] = random.Next(10 , 100);
-//    }
+//     for (int j = 0; j < array2d.GetLength(1); j++)
+//     {
+//         array2d[i, j] = random.Next(10, 100);
+//     }
 // }
 
 // void Print2dArray(int[,] array)
 // {
-//    for (int i = 0; i < array2d.GetLength(0); i++)
-// {
-//    for (int j = 0; j < array2d.GetLength(1); j++)
-//    {
-//       System.Console.Write($"{array2d[i , j]} ");
-//    }
-//    System.Console.WriteLine();
-// }
+//     for (int i = 0; i < array2d.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array2d.GetLength(1); j++)
+//         {
+//             System.Console.Write($"{array2d[i, j]} ");
+//         }
+//         System.Console.WriteLine();
+//     }
 // }
 
 // Print2dArray(array2d);
@@ -176,15 +177,15 @@
 
 // int[,] CopyArray2D(int[,] array)
 // {
-//    int[,] copyArr = new int [10, 10];
+//     int[,] copyArr = new int[10, 10];
 
-//    for (int i = 0; i < array.GetLength(0); i++)
-// {
-//    for (int j = 0; j < array.GetLength(1); j++)
-//    {
-//       copyArr[i,j] = array[i , j];
-//    }
-// }
-// return copyArr;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             copyArr[i, j] = array[i, j];
+//         }
+//     }
+//     return copyArr;
 // }
 // Print2dArray(CopyArray2D(array2d));
