@@ -102,21 +102,21 @@
 //     return;
 // }
 
-int[,] FillArray2D(int m, int n, int minValue, int maxValue)
-{
-    int[,] array = new int[m, n];
+// int[,] FillArray2D(int m, int n, int minValue, int maxValue)
+// {
+//     int[,] array = new int[m, n];
 
-    Random random = new Random();
+//     Random random = new Random();
 
-    for (int i = 0; i < m; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            array[i, j] = random.Next(minValue, maxValue);
-        }
-    }
-    return array;
-}
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             array[i, j] = random.Next(minValue, maxValue);
+//         }
+//     }
+//     return array;
+// }
 
 // int[,] ChangeNumberInSquare(int[,] array)
 // {
@@ -135,17 +135,17 @@ int[,] FillArray2D(int m, int n, int minValue, int maxValue)
 // }
 
 
-void Print2dArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            System.Console.Write($"{array[i, j]} ");
-        }
-        System.Console.WriteLine();
-    }
-}
+// void Print2dArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             System.Console.Write($"{array[i, j]} ");
+//         }
+//         System.Console.WriteLine();
+//     }
+// }
 
 
 
@@ -231,12 +231,12 @@ Print2dArray(array);
 System.Console.WriteLine();
 if (numberFirst == numberSecond)
 {
-    int sum = FindSummElementsInMassive(array);
+    int sum = FindSummElementsInMassive2(array);
     System.Console.WriteLine($"The sum = {sum}");
 }
 else
 {
-    int sum = FindSummElementsInMassive2(array);
+    int sum = FindSummElementsInMassive(array);
     System.Console.WriteLine($"The sum = {sum}");
 }
 
