@@ -187,7 +187,7 @@ int[,] FillArray2D(int m, int n, int minValue, int maxValue)
     return array;
 }
 
-int FindSummElementsInMassive2(int[,] array)
+int FindSummElementsInMassive(int[,] array)
 {
     int sum = 0;
     for (int i = 0; i < array.GetLength(0); i++)
@@ -204,7 +204,7 @@ int FindSummElementsInMassive2(int[,] array)
 }
 
 
-int FindSummElementsInMassive(int[,] array)
+int FindSummElementsInMassive2(int[,] array)
 {
     int sum = 0;
     for (int i = 0; i < array.GetLength(0); i++)
