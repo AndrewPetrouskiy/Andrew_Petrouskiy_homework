@@ -159,84 +159,96 @@
 // Task 52
 
 
-void Print2dArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            System.Console.Write($"{array[i, j]} ");
-        }
-        System.Console.WriteLine();
-    }
-}
+// void Print2dArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             System.Console.Write($"{array[i, j]} ");
+//         }
+//         System.Console.WriteLine();
+//     }
+// }
 
-int[,] FillArray2D(int m, int n, int minValue, int maxValue)
-{
-    int[,] array = new int[m, n];
+// int[,] FillArray2D(int m, int n, int minValue, int maxValue)
+// {
+//     int[,] array = new int[m, n];
 
-    Random random = new Random();
+//     Random random = new Random();
 
-    for (int i = 0; i < m; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            array[i, j] = random.Next(minValue, maxValue);
-        }
-    }
-    return array;
-}
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             array[i, j] = random.Next(minValue, maxValue);
+//         }
+//     }
+//     return array;
+// }
 
-int FindSummElementsInMassive(int[,] array)
-{
-    int sum = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (i == j)
-            {
-                sum = sum + array[i, j];
-            }
-        }
-    }
-    return sum;
-}
-
-
-int FindSummElementsInMassive2(int[,] array)
-{
-    int sum = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-
-        sum = sum + array[i, i];
-    }
-    return sum;
-}
+// int FindSummElementsInMassive(int[,] array)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (i == j)
+//             {
+//                 sum = sum + array[i, j];
+//             }
+//         }
+//     }
+//     return sum;
+// }
 
 
+// int FindSummElementsInMassive2(int[,] array)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
 
-System.Console.WriteLine("Enter the length number");
-int numberFirst = int.Parse(Console.ReadLine());
-System.Console.WriteLine("Enter the higher number");
-int numberSecond = int.Parse(Console.ReadLine());
-System.Console.WriteLine("Enter the min number");
-int minValue = int.Parse(Console.ReadLine());
-System.Console.WriteLine("Enter the max number");
-int maxValue = int.Parse(Console.ReadLine());
+//         sum = sum + array[i, i];
+//     }
+//     return sum;
+// }
 
-int[,] array = FillArray2D(numberFirst, numberSecond, minValue, maxValue);
-Print2dArray(array);
-System.Console.WriteLine();
-if (numberFirst == numberSecond)
-{
-    int sum = FindSummElementsInMassive2(array);
-    System.Console.WriteLine($"The sum = {sum}");
-}
-else
-{
-    int sum = FindSummElementsInMassive(array);
-    System.Console.WriteLine($"The sum = {sum}");
-}
+
+
+// System.Console.WriteLine("Enter the length number");
+// int numberFirst = int.Parse(Console.ReadLine());
+// System.Console.WriteLine("Enter the higher number");
+// int numberSecond = int.Parse(Console.ReadLine());
+// System.Console.WriteLine("Enter the min number");
+// int minValue = int.Parse(Console.ReadLine());
+// System.Console.WriteLine("Enter the max number");
+// int maxValue = int.Parse(Console.ReadLine());
+
+// int[,] array = FillArray2D(numberFirst, numberSecond, minValue, maxValue);
+// Print2dArray(array);
+// System.Console.WriteLine();
+// if (numberFirst == numberSecond)
+// {
+//     int sum = FindSummElementsInMassive2(array);
+//     System.Console.WriteLine($"The sum = {sum}");
+// }
+// else
+// {
+//     int sum = FindSummElementsInMassive(array);
+//     System.Console.WriteLine($"The sum = {sum}");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
 
