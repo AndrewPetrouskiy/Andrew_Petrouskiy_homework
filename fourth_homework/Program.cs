@@ -1,10 +1,10 @@
 ﻿// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
 
-double GetExponentiation(double arg1 , double arg2)
-{
-double arg = Math.Pow(arg1 , arg2);
-return arg;
-}
+// double GetExponentiation(double arg1 , double arg2)
+// {
+// double arg = Math.Pow(arg1 , arg2);
+// return arg;
+// }
 
 // Console.WriteLine("enter the number 1");
 // double numberOne = double.Parse(Console.ReadLine());
@@ -17,15 +17,15 @@ return arg;
 // Task 25 solution 2
 
 
-double GetExponentiationTwo(double arg1 , double arg2)
-{
-double exp = 1;
-for(double i = 0; i < arg2; i++)
-{
-    exp = exp * arg1;
-}
-return exp;
-}
+// double GetExponentiationTwo(double arg1 , double arg2)
+// {
+// double exp = 1;
+// for(double i = 0; i < arg2; i++)
+// {
+//     exp = exp * arg1;
+// }
+// return exp;
+// }
 
 // Console.WriteLine("enter the number 1");
 // double numberOne = double.Parse(Console.ReadLine());
@@ -45,16 +45,16 @@ return exp;
 
 // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
-int GetSumOfFigures(int num)
-{
-    int summ = 0;
-    while(num > 0)
-    {
-        summ = summ + num % 10;
-        num /= 10;
-    }
-    return summ;
-}
+// int GetSumOfFigures(int num)
+// {
+//     int summ = 0;
+//     while(num > 0)
+//     {
+//         summ = summ + num % 10;
+//         num /= 10;
+//     }
+//     return summ;
+// }
 // Console.WriteLine("enter the number ");
 // int number = int.Parse(Console.ReadLine());
 // int result = GetSumOfFigures(number);
