@@ -280,9 +280,36 @@ for (int i = 1; i <= countTests; i++)
 Console.WriteLine($"Для FibonacciR прошло: {DateTime.Now - saveTime}");*/
 
 
+//================================================================================================
+// Поиск уникальных элементов
 
+int[,,] FillArray3D(int lengthArray, int heightArray, int depthArray, int minValue, int maxValue)
+{
+    int[,,] array = new int[lengthArray, heightArray, depthArray];
 
+    Random random = new Random();
 
+    for (int i = 0; i < lengthArray; i++)
+    {
+        for (int j = 0; j < heightArray; j++)
+        {
+            for (int k = 0; k < depthArray; k++)
+            {
+
+                int m = random.Next(minValue, maxValue);
+                foreach (int b in array)
+                {
+                    while(b == m)
+                    {
+                        m = random.Next(minValue, maxValue);
+                    }
+                    array[i,j,k] = m;
+                }
+            }
+        }
+    }
+    return array;
+}
 
 
 
